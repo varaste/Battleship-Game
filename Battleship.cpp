@@ -6,7 +6,7 @@
 #include <ctime>
 #include <time.h>
 #include <cstdlib>
-//11
+//12
 using namespace std;
 
 bool win(double a[][10]) {
