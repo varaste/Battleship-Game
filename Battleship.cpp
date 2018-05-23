@@ -4,10 +4,6 @@
 #include <windows.h>
 #include <conio.h>
 #include <ctime>
-#include <time.h>
-#include <cstdlib>
-//13
-using namespace std;
 
 bool win(double a[][10]) {
 	bool p = true;
@@ -40,13 +36,6 @@ int main() {
 	unsigned seed = time(NULL);
 	srand(seed);
 	rfs = rand() % 2 + 1;
-	//random
-
-	pc[0][2] = pc[0][4] = pc[0][5] = pc[0][7] = pc[3][1] = pc[3][2] = pc[3][3] = pc[3][4] = pc[2][9] = pc[3][9] =
-		pc[5][7] = pc[6][7] = pc[7][0] = pc[7][2] = pc[8][2] = pc[9][2] = pc[9][5] = pc[9][6] = pc[9][7] = pc[8][9] = 1;//kashti haye pc
-
-	pc[0][1] = pc[0][3] = pc[0][6] = pc[0][8] = pc[1][1]
-		= pc[1][2] = pc[1][3] = pc[1][4] = pc[1][5]
 		= pc[1][6] = pc[1][7] = pc[1][8] = pc[1][9]
 		= pc[2][0] = pc[2][1] = pc[2][2] = pc[2][3]
 		= pc[2][4] = pc[2][5] = pc[2][8] = pc[3][0]
