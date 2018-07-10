@@ -67,14 +67,6 @@ int main() {
 				a[i - 1][j] = a[i - 2][j] = a[i - 3][j] = a[i][j] = 1;
 
 				//gozashtane 2  4
-				for (int k = i; k >= i - 3; k--) {
-					if (j + 1 <= 9)
-						a[k][j + 1] = 2;
-					if (j - 1 >= 0)
-						a[k][j - 1] = 2;
-				} //for gozashtane 2  4
-
-				  //4 ta if gooshe case 1  4
 				if (i - 4 >= 0 && j - 1 >= 0)
 					a[i - 4][j - 1] = 2;
 				if (i - 4 >= 0 && j + 1 <= 9)
