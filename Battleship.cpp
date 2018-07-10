@@ -25,12 +25,7 @@ int main() {
 	SetConsoleTextAttribute(hstdout, 0x09); //Color for text
 	cout << "<<<<<<<<<< Welcome to the Battleship game >>>>>>>>>>\n\n ";
 
-	SetConsoleTextAttribute(hstdout, 0x0a); //Color for text green
-		= pc[2][4] = pc[2][5] = pc[2][8] = pc[3][0]
-		= pc[3][5] = pc[3][8] = pc[4][0] = pc[4][1]
-		= pc[4][2] = pc[4][3] = pc[4][4] = pc[4][5]
-		= pc[4][6] =
-		pc[4][7] = pc[4][8] = pc[4][9] = pc[5][6] = pc[5][8] = pc[6][0] = pc[6][1] = pc[6][2] = pc[6][3] = pc[6][6] =
+	SetConsoleTextAttribute(hstdout, 0x0a); //Color for text greenpc[6][2] = pc[6][3] = pc[6][6] =
 		pc[6][8] = pc[7][1] = pc[7][3] = pc[7][6] = pc[7][7] = pc[7][8] = pc[7][9] = pc[8][1] = pc[8][3] =
 		pc[8][4] = pc[8][5] = pc[8][6] = pc[8][7] = pc[8][8] = pc[9][1] = pc[9][3] = pc[9][4] = pc[9][8] =
 		pc[9][9] = 2;//havalie kashti haye pc
