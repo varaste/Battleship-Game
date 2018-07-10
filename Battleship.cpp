@@ -26,18 +26,6 @@ int main() {
 	cout << "<<<<<<<<<< Welcome to the Battleship game >>>>>>>>>>\n\n ";
 
 	SetConsoleTextAttribute(hstdout, 0x0a); //Color for text green
-	cout << "whats your name? ";
-
-	SetConsoleTextAttribute(hstdout, 0x0f); //Color for text white
-	cin >> name;
-	cout << endl;
-	//gereftane karbar tamam shod
-
-	unsigned seed = time(NULL);
-	srand(seed);
-	rfs = rand() % 2 + 1;
-		= pc[1][6] = pc[1][7] = pc[1][8] = pc[1][9]
-		= pc[2][0] = pc[2][1] = pc[2][2] = pc[2][3]
 		= pc[2][4] = pc[2][5] = pc[2][8] = pc[3][0]
 		= pc[3][5] = pc[3][8] = pc[4][0] = pc[4][1]
 		= pc[4][2] = pc[4][3] = pc[4][4] = pc[4][5]
@@ -102,18 +90,7 @@ int main() {
 					a[i + 1][j] = 2;
 
 
-				t++;
-				break;
-			}//if dakhele case 1  4
-					else {
-						SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-						cout << "The ship is not correctiraction ghalate dobare vared konid\a\n" << endl;
-						break;
-						//he ship is not correct
-					}//end else   case 1   4
-
-
-			case 2:if (j + 2 >= 0 && a[i][j + 1] == 0 && a[i][j + 2] == 0 && a[i][j + 3] == 0) {
+				t++;2] == 0 && a[i][j + 3] == 0) {
 				//gozashtane 1 case 2  4
 				a[i][j + 1] = a[i][j + 2] = a[i][j + 3] = a[i][j] = 1;
 
@@ -144,14 +121,7 @@ int main() {
 			}//if dakhele case 2-4
 				   else {
 					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }// end else case 2  4
-
-					//end case 2  4
-
+					   cout << "diraction ghalate dobare v
 			case 3:if (i + 3 >= 0 && a[i + 1][j] == 0 && a[i + 2][j] == 0 && a[i + 3][j] == 0) {
 				//gozashtane 1
 				a[i + 1][j] = a[i + 2][j] = a[i + 3][j] = a[i][j] = 1;
@@ -191,13 +161,6 @@ int main() {
 				/*gozashtane 1*/	a[i][j - 3] = a[i][j - 2] = a[i][j - 1] = a[i][j] = 1;
 
 				//gozashtane 2
-				for (int k = j; k >= j - 3; k--) {
-					if (i + 1 <= 9)
-						a[i + 1][k] = 2;
-					if (i - 1 >= 0)
-						a[i - 1][k] = 2;
-
-				} //for
 				if (j - 4 >= 0)
 					a[i][j - 4] = 2;
 				if (j + 1 <= 9)
@@ -229,14 +192,6 @@ int main() {
 
 
 
-	 // for baraye 3 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-	for (; f <= 2; ) {
-		SetConsoleTextAttribute(hstdout, 0x0a);		//Color for text green
-		cout << "whats your 3s position?\n";
-		SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text white
-		cin >> i >> j;
-
-				a[i - 1][j] = a[i - 2][j] = a[i][j] = 1;
 
 				//gozashtane 2
 				for (int k = i; k >= i - 2; k--) {
@@ -274,17 +229,6 @@ int main() {
 				if (i + 1 <= 9 && j - 1 >= 0)
 					a[i + 1][j - 1] = 2;
 				if (i + 1 <= 9 && j + 3 <= 9)
-					a[i + 1][j + 3] = 2;
-				f++;
-				break;
-			}//if dakhele case
-				   else {
-					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }
 			case 3:if (i + 2 >= 0 && a[i + 1][j] == 0 && a[i + 2][j] == 0) {
 				/*gozashtane 1*/	a[i + 1][j] = a[i + 2][j] = a[i][j] = 1;
 
@@ -313,23 +257,7 @@ int main() {
 				break;
 			}//if dakhele case
 				   else {
-					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }
-			case 4:if (j - 2 >= 0 && a[i][j - 2] == 0 && a[i][j - 1] == 0) {
-				/*gozashtane 1*/	a[i][j - 2] = a[i][j - 1] = a[i][j] = 1;
-
-				//gozashtane 2
-				for (int k = j; k >= j - 2; k--) {
-					if (i + 1 <= 9)
-						a[i + 1][k] = 2;
-					if (i - 1 >= 0)
-						a[i - 1][k] = 2;
-
-				} //for
+					   SetConsoleTextAttribute(hstdout, 0x0c);
 				if (j - 3 >= 0)
 					a[i][j - 3] = 2;
 				if (j + 1 <= 9)
@@ -362,18 +290,7 @@ int main() {
 
 		}//elce if 1
 		SetConsoleTextAttribute(hstdout, 0x0e);		//Color for text yellow
-		for (int k = 0; k < 10; k++) {
-			for (int o = 0; o < 10; o++)
-				cout << a[k][o];
-			cout << endl;
-		}
-	}//for 3
-
-	 //for bara 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
-	for (; m <= 3; ) {
-		SetConsoleTextAttribute(hstdout, 0x0a);		//Color for text green
-		cout << "whats your 2s position?\n";
-		SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text white
+		for (int k = 0; k < 10; k++) {xt white
 		cin >> i >> j;
 
 		if (i < 10 && i >= 0 && j < 10 && j >= 0 && a[i][j] == 0) {
@@ -396,16 +313,6 @@ int main() {
 						a[k][j - 1] = 2;
 
 				} //for gozashtane 2
-				if (i - 2 >= 0)
-					a[i - 2][j] = 2;
-				if (i + 1 <= 9)
-					a[i + 1][j] = 2;
-				//4 ta if gooshe
-				if (i - 2 >= 0 && j - 1 >= 0)
-					a[i - 2][j - 1] = 2;
-				if (i - 2 >= 0 && j + 1 <= 9)
-					a[i - 2][j + 1] = 2;
-				if (i + 1 <= 9 && j - 1 >= 0)
 					a[i + 1][j - 1] = 2;
 				if (i + 1 <= 9 && j + 1 <= 9)
 					a[i + 1][j + 1] = 2;
@@ -436,15 +343,6 @@ int main() {
 				if (j - 1 >= 0)
 					a[i][j - 1] = 2;
 				if (j + 2 <= 9)
-					a[i][j + 2] = 2;
-				//4 ta if gooshe
-				if (i - 1 >= 0 && j - 1 >= 0)
-					a[i - 1][j - 1] = 2;
-				if (i - 1 >= 0 && j + 2 <= 9)
-					a[i - 1][j + 2] = 2;
-				if (i + 1 <= 9 && j - 1 >= 0)
-					a[i + 1][j - 1] = 2;
-				if (i + 1 <= 9 && j + 2 <= 9)
 					a[i + 1][j + 2] = 2;
 				m++;
 				break;
@@ -486,24 +384,6 @@ int main() {
 				break;
 			}//if dakhele case
 				   else {
-					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction 2 ro ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }
-			case 4:if (j - 2 >= 0 && a[i][j - 1] == 0 && a[i][j - 2] == 0) {
-				//gozashtane 1
-				a[i][j - 1] = a[i][j] = a[i][j - 2] = 1;
-
-				//gozashtane 2
-				for (int k = j; k >= j - 1; k--) {
-					if (i + 1 <= 9)
-						a[i + 1][k] = 2;
-					if (i - 1 >= 0)
-						a[i - 1][k] = 2;
-
-				} //for
 				if (j - 2 >= 0)
 					a[i][j - 2] = 2;
 				if (j + 1 <= 9)
@@ -513,16 +393,7 @@ int main() {
 					a[i - 1][j - 2] = 2;
 				if (i - 1 >= 0 && j + 1 <= 9)
 					a[i - 1][j + 1] = 2;
-				if (i + 1 <= 9 && j - 2 >= 0)
-					a[i + 1][j - 2] = 2;
-				if (i + 1 <= 9 && j + 1 <= 9)
-					a[i + 1][j + 1] = 2;
-				m++;
-				break;
-			}//if dakhele case
-				   else {
-					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction 2ro ghalate dobare vared konid\n" << endl;
+				if (i + 1 <= 9 && j - 2 >= 0)vared konid\n" << endl;
 					   cout << "\a";
 					   break;
 
