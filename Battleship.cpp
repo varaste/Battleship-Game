@@ -522,20 +522,7 @@ int main() {
 				   else {
 					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
 					   cout << "diraction 1 ro ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }
-			case 4:if (j - 1 >= 0 && a[i][j - 1] == 0) {
-				//gozashtane 1
-				a[i][j] = 1;
-
-				//gozashtane 2
-				for (int k = j; k >= j - 1; k--) {
-					if (i + 1 <= 9)
-						a[i + 1][k] = 2;
-					if (i - 1 >= 0)
-						a[i - 1][k] = 2;
+				
 
 				} //for
 				if (j - 2 >= 0)
@@ -595,16 +582,7 @@ int main() {
 					cout << "inja nemitavanid shelik konid va mokhtasate jadid baraye shelik vared konid";
 					continue;
 				}
-				//else yani baraye dorost dadn
-				else {
-					if (pc[x][y] == 1) {		//zarbe dorost
-						pc[x][y] = 9;			// alamat zadan zarbe dorost
-						pcn[x][y] = 9;			// alamat zadan zarbe dorost
-						if (x + 1 <= 9 && y + 1 <= 9 && pc[x + 1][y + 1] != 7) {// alamat zadan hashie zarbe dorost
-							pc[x + 1][y + 1] = 8;
-							pcn[x + 1][y + 1] = 8;
-						}
-						if (x + 1 <= 9 && y - 1 >= 0 && pc[x + 1][y - 1] != 7) {// alamat zadan hashie zarbe dorost
+				//else yif (x + 1 <= 9 && y - 1 >= 0 && pc[x + 1][y - 1] != 7) {// alamat zadan hashie zarbe dorost
 							pc[x + 1][y - 1] = 8;
 							pcn[x + 1][y - 1] = 8;
 						}
@@ -659,15 +637,7 @@ int main() {
 			cout << "hala computer vared mikonad\n";
 			//hala pc
 			while (check1 == false) {
-				unsigned seed = time(NULL);
-				srand(seed);			//entekhabe shansi pc
-				x = rand() % 10;			//entekhabe shansi pc
-				y = rand() % 10;			//entekhabe shansi pc
-				if (a[x][y] == 8 || a[x][y] == 9 || a[x][y] == 7) {
-					continue;
-				}
-				else {
-					if (a[x][y] == 1) {			// zarbe dorost
+				unsignedif (a[x][y] == 1) {			// zarbe dorost
 						a[x][y] = 9;			// alamat zadan zarbe dorost
 						if (x + 1 <= 9 && y + 1 <= 9) {		// alamat zadan hashie zarbe dorost
 							a[x + 1][y + 1] = 8;
@@ -716,15 +686,7 @@ int main() {
 			cout << "shoma bordid";
 	}//if rfs==1
 
-	if (rfs == 2) {
-		while (wina == 0 && winpc == 0) {
-			check1 = false;
-			SetConsoleTextAttribute(hstdout, 0x0f); //Color for text 
-			cout << "hala computer vared mikonad\n";
-			//hala pc
-			while (check1 == false) {
-				unsigned seed = time(NULL);
-				//entekhabe shansi pc
+	if (rfs == 2) {/entekhabe shansi pc
 				srand(seed);
 				x = rand() % 10;
 				y = rand() % 10;
@@ -771,12 +733,7 @@ int main() {
 			check1 = false;
 			winpc = win(a);
 			if (winpc == true)
-				continue;
-			wina = win(pc);
-			if (wina != true) {
-				SetConsoleTextAttribute(hstdout, 0x0f); //Color for text 
-				cout << "its " << name << "`s turn so please fire and give me a position\n";
-			}
+				co
 			else
 			{
 				SetConsoleTextAttribute(hstdout, 0x09); //Color for text green
@@ -821,16 +778,6 @@ int main() {
 								if (pcn[l][e] == 0) {
 									SetConsoleTextAttribute(hstdout, 0x19); //Color 
 									cout << char(247) << char(255);
-								}
-								if (pcn[l][e] == 7) {
-									SetConsoleTextAttribute(hstdout, 0xc4); //Color 
-									cout << char(233) << char(255);
-								}
-								if (pcn[l][e] == 9) {
-									SetConsoleTextAttribute(hstdout, 0xa2); //Color 
-									cout << char(42) << char(255);
-								}
-								if (pcn[l][e] == 8) {
 									SetConsoleTextAttribute(hstdout, 0xe0); //Color 
 									cout << char(176) << char(255);
 								}
@@ -874,13 +821,7 @@ int main() {
 								}
 							}
 							cout << endl;
-						}
-						continue;
-					}
-					if (pc[x][y] == 0 || pc[x][y] == 2) {
-						pc[x][y] = 7;
-						pcn[x][y] = 7;
-						check1 = true;
+					پ	check1 = true;
 						cout << endl;
 						for (int l = 0; l <= 9; l++) {		//namayeshe safhe
 							for (int e = 0; e <= 9; e++) {
@@ -911,15 +852,6 @@ int main() {
 						continue;
 					}
 				}//else
-			}//while voroudi karbar
-			wina = win(pc);
-			if (wina == true)
-				continue;
-			check1 = false; //check
-		}
-	}
-	system("pause");
-	return 0;
 }//main
 
 
