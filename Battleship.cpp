@@ -23,19 +23,7 @@ int main() {
 	bool check = false, wina = false, winpc = false, check1 = false;
 
 	SetConsoleTextAttribute(hstdout, 0x09); //Color for text
-	cout << "<<<<<<<<<< Welcome to the Battleship game >>>>>>>>>>\n\n ";
-
-	SetConsoleTextAttribute(hstdout, 0x0a); //Color for text greenpc[6][2] = pc[6][3] = pc[6][6] =
-		pc[6][8] = pc[7][1] = pc[7][3] = pc[7][6] = pc[7][7] = pc[7][8] = pc[7][9] = pc[8][1] = pc[8][3] =
-		pc[8][4] = pc[8][5] = pc[8][6] = pc[8][7] = pc[8][8] = pc[9][1] = pc[9][3] = pc[9][4] = pc[9][8] =
-		pc[9][9] = 2;//havalie kashti haye pc
-
-
-					 /*a[0][2] = a[0][4] = a[0][5] = a[0][7] = a[3][1] = a[3][2] = a[3][3] = a[3][4] = a[2][9] = a[3][9] =
-					 a[5][7] = a[6][7] = a[7][0] = a[7][2] = a[8][2] = a[9][2] = a[9][5] = a[9][6] = a[9][7] = a[8][9] = 1;//kashti haye karabar
-
-					 a[0][1] = a[0][3] = a[0][6] = a[0][8] = a[1][1] = a[1][2] = a[1][3] = a[1][4] = a[1][5] = a[1][6] =
-					 a[1][7] = a[1][8] = a[1][9] = a[2][0] = a[2][1] = a[2][2] = a[2][3] = a[2][4] = a[2][5] = a[2][8] =
+	cout << "<<<<<<<<<< Welcome to the Battleship game >>>>>>>>>>\n\n ";] = a[2][1] = a[2][2] = a[2][3] = a[2][4] = a[2][5] = a[2][8] =
 					 a[3][0] = a[3][5] = a[3][8] = a[4][0] = a[4][1] = a[4][2] = a[4][3] = a[4][4] = a[4][5] = a[4][6] =
 					 a[4][7] = a[4][8] = a[4][9] = a[5][6] = a[5][8] = a[6][0] = a[6][1] = a[6][2] = a[6][3] = a[6][6] =
 					 a[6][8] = a[7][1] = a[7][3] = a[7][6] = a[7][7] = a[7][8] = a[7][9] = a[8][1] = a[8][3] =
@@ -91,9 +79,6 @@ int main() {
 				} //for gozashtane 2   case 2  4
 
 				if (j - 1 >= 0)
-					a[i][j - 1] = 2;
-				if (j + 4 <= 9)
-					a[i][j + 4] = 2;
 				//4 ta if gooshe  case 2  4
 				if (i - 1 >= 0 && j - 1 >= 0)
 					a[i - 1][j - 1] = 2;
@@ -139,16 +124,7 @@ int main() {
 			}//if dakhele case
 				   else {
 					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-					   cout << "diraction ghalate dobare vared konid\n" << endl;
-					   cout << "\a";
-					   break;
-
-				   }
-			case 4:if (j - 3 >= 0 && a[i][j - 1] == 0 && a[i][j - 2] == 0 && a[i][j - 1] == 0) {
-				/*gozashtane 1*/	a[i][j - 3] = a[i][j - 2] = a[i][j - 1] = a[i][j] = 1;
-
-				//gozashtane 2
-				if (j - 4 >= 0)
+					   cout << "diraction ghalate dobar
 					a[i][j - 4] = 2;
 				if (j + 1 <= 9)
 					a[i][j + 1] = 2;
@@ -206,11 +182,6 @@ int main() {
 
 				if (j - 1 >= 0)
 					a[i][j - 1] = 2;
-				if (j + 3 <= 9)
-					a[i][j + 3] = 2;
-				//4 ta if gooshe
-				if (i - 1 >= 0 && j - 1 >= 0)
-					a[i - 1][j - 1] = 2;
 				if (i - 1 >= 0 && j + 3 <= 9)
 					a[i - 1][j + 3] = 2;
 				if (i + 1 <= 9 && j - 1 >= 0)
