@@ -5,19 +5,6 @@
 #include <conio.h>
 #include <ctime>
 
-bool win(double a[][10]) {
-	bool p = true;
-	for (int i = 0; i < 10; i++)
-		for (int j = 0; j < 10; j++)
-			if (a[i][j] == 1)
-				p = false;
-	return p;
-}
-int main() {
-	HANDLE hstdout = GetStdHandle(STD_OUTPUT_HANDLE); //Color for text
-	HANDLE hstdin = GetStdHandle(STD_INPUT_HANDLE); //Color for text
-
-	double a[10][10] = { 0 }, pcn[10][10] = { 0 }, pc[10][10] = { 0 }; //rs=random for start
 	int x, y, i, j, t = 1, f = 1, m = 1, n = 1, rfs, direction;
 	string name;
 	bool check = false, wina = false, winpc = false, check1 = false;
@@ -55,18 +42,6 @@ int main() {
 				if (i - 4 >= 0 && j + 1 <= 9)
 					a[i - 4][j + 1] = 2;
 				if (i + 1 <= 9 && j - 1 >= 0)
-					a[i + 1][j - 1] = 2;
-				if (i + 1 <= 9 && j + 1 <= 9)
-					a[i + 1][j + 1] = 2;
-
-				if (i - 4 >= 0)
-					a[i - 4][j] = 2;
-				if (i + 1 <= 9)
-					a[i + 1][j] = 2;
-
-
-				t++;2] == 0 && a[i][j + 3] == 0) {
-				//gozashtane 1 case 2  4
 				a[i][j + 1] = a[i][j + 2] = a[i][j + 3] = a[i][j] = 1;
 
 				//gozashtane 2  case 2  4
@@ -113,14 +88,6 @@ int main() {
 				//4 ta if gooshe
 				if (i - 1 >= 0 && j - 1 >= 0)
 					a[i - 1][j - 1] = 2;
-				if (i - 1 >= 0 && j + 1 <= 9)
-					a[i - 1][j + 1] = 2;
-				if (i + 4 <= 9 && j - 1 >= 0)
-					a[i + 4][j - 1] = 2;
-				if (i + 4 <= 9 && j + 1 <= 9)
-					a[i + 4][j + 1] = 2;
-				t++;
-				break;
 			}//if dakhele case
 				   else {
 					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
@@ -159,11 +126,6 @@ int main() {
 				//gozashtane 2
 				for (int k = i; k >= i - 2; k--) {
 					if (j + 1 <= 9)
-						a[k][j + 1] = 2;
-					if (j - 1 >= 0)
-						a[k][j - 1] = 2;
-
-				} //for gozashtane 2
 
 					}//end else case 1
 
@@ -177,16 +139,6 @@ int main() {
 						a[i + 1][k] = 2;
 					if (i - 1 >= 0)
 						a[i - 1][k] = 2;
-
-				} //for
-
-				if (j - 1 >= 0)
-					a[i][j - 1] = 2;
-				if (i - 1 >= 0 && j + 3 <= 9)
-					a[i - 1][j + 3] = 2;
-				if (i + 1 <= 9 && j - 1 >= 0)
-					a[i + 1][j - 1] = 2;
-				if (i + 1 <= 9 && j + 3 <= 9)
 			case 3:if (i + 2 >= 0 && a[i + 1][j] == 0 && a[i + 2][j] == 0) {
 				/*gozashtane 1*/	a[i + 1][j] = a[i + 2][j] = a[i][j] = 1;
 
@@ -223,13 +175,6 @@ int main() {
 				//4 ta if gooshe
 				if (i - 1 >= 0 && j - 3 >= 0)
 					a[i - 1][j - 3] = 2;
-				if (i - 1 >= 0 && j + 1 <= 9)
-					a[i - 1][j + 1] = 2;
-				if (i + 1 <= 9 && j - 3 >= 0)
-					a[i + 1][j - 3] = 2;
-				if (i + 1 <= 9 && j + 1 <= 9)
-					a[i + 1][j + 1] = 2;
-				f++;
 				break;
 			}//if dakhele case
 				   else {
@@ -276,14 +221,6 @@ int main() {
 					a[i + 1][j + 1] = 2;
 				m++;
 				break;
-			}//if dakhele case
-					else {
-						SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-						cout << "diraction 2 ro ghalate dobare vared konid\n" << endl;
-						cout << "\a";
-						break;
-
-					}//end else case 1
 
 			case 2:if (j + 2 >= 0 && a[i][j + 2] == 0 && a[i][j + 1] == 0) {
 				//gozashtane 1
@@ -320,19 +257,6 @@ int main() {
 				//gozashtane 2
 				for (int k = i; k <= i + 1; k++) {
 					if (j + 1 <= 9)
-						a[k][j + 1] = 2;
-					if (j - 1 >= 0)
-						a[k][j - 1] = 2;
-
-				} //for
-				if (i + 2 <= 9)
-					a[i + 2][j] = 2;
-				if (i - 1 >= 0)
-					a[i - 1][j] = 2;
-				//4 ta if gooshe
-				if (i - 1 >= 0 && j - 1 >= 0)
-					a[i - 1][j - 1] = 2;
-				if (i - 1 >= 0 && j + 1 <= 9)
 					a[i - 1][j + 1] = 2;
 				if (i + 2 <= 9 && j - 1 >= 0)
 					a[i + 2][j - 1] = 2;
@@ -373,25 +297,11 @@ int main() {
 
 	}//for 2
 
-	 //for bara 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-
-	for (; n <= 4; ) {
-		SetConsoleTextAttribute(hstdout, 0x0a);		//Color for text green
-		cout << "whats your 1s position?\n";
-		SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text white
-		cin >> i >> j;
-
-		if (i < 10 && i >= 0 && j < 10 && j >= 0 && a[i][j] == 0) {
-			SetConsoleTextAttribute(hstdout, 0x0a);		//Color for text green
+	 //for bara 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 			cout << "whats the navis direction?\n";
 			cout << "for up : 1\nfor right : 2\nfor down : 3\nfor left : 4\n";
 			SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text
 			cin >> direction;
-
-			switch (direction) {
-			case 1: if (i - 1 >= 0 && a[i - 1][j] == 0) {
-				//gozashtane 1
-				a[i][j] = 1;
 
 				//gozashtane 2
 				for (int k = i; k >= i - 1; k--) {
@@ -431,14 +341,6 @@ int main() {
 
 				//gozashtane 2
 				for (int k = j; k <= j + 1; k++) {
-					if (i + 1 <= 9)
-						a[i + 1][k] = 2;
-					if (i - 1 >= 0)
-						a[i - 1][k] = 2;
-
-				} //for
-
-				if (j - 1 >= 0)
 					a[i][j - 1] = 2;
 				if (j + 1 <= 9)
 					a[i][j + 1] = 2;
@@ -479,12 +381,6 @@ int main() {
 				if (i - 1 >= 0)
 					a[i - 1][j] = 2;
 				//4 ta if gooshe
-				if (i - 1 >= 0 && j - 1 >= 0)
-					a[i - 1][j - 1] = 2;
-				if (i - 1 >= 0 && j + 1 <= 9)
-					a[i - 1][j + 1] = 2;
-				if (i + 1 <= 9 && j - 1 >= 0)
-					a[i + 1][j - 1] = 2;
 				if (i + 1 <= 9 && j + 1 <= 9)
 					a[i + 1][j + 1] = 2;
 				n++;
@@ -526,13 +422,6 @@ int main() {
 			cout << "mahal ghalat dadi\n";
 
 
-		}//elce if 1
-		SetConsoleTextAttribute(hstdout, 0x0e);		//Color for text yellow
-		for (int k = 0; k < 10; k++) {
-			for (int o = 0; o < 10; o++)
-				cout << a[k][o];
-			cout << endl;
-		}
 
 	}//for 1
 
@@ -573,13 +462,7 @@ int main() {
 						// continue payin baraye jayeze ast
 						wina = win(pc);
 						if (wina != true)
-							cout << "\nshelik mavafagh boode pas ye bar dg shelik kn\n";
-						cout << endl;
-						for (int l = 0; l <= 9; l++) {			//namayeshe safhe
-							for (int e = 0; e <= 9; e++)
-								cout << pcn[l][e];
-							cout << endl;
-						}
+							cout << "\nshelik mavafagh boode pas ye bar dg shelik k
 						wina = win(pc);
 						if (wina == true) {
 							cout << "shoma bordid";
@@ -613,14 +496,7 @@ int main() {
 						if (x + 1 <= 9 && y + 1 <= 9) {		// alamat zadan hashie zarbe dorost
 							a[x + 1][y + 1] = 8;
 						}
-						if (x + 1 <= 9 && y - 1 >= 0) {		// alamat zadan hashie zarbe dorost
-							a[x + 1][y - 1] = 8;
-						}
-						if (x - 1 >= 0 && y + 1 <= 9) {		// alamat zadan hashie zarbe dorost
-							a[x - 1][y + 1] = 8;
-						}
-						if (x - 1 >= 0 && y - 1 >= 0) {		// alamat zadan hashie zarbe dorost
-							a[x - 1][y - 1] = 8;
+						if (x + 1 <= 9 && y - 1 >= 0) {		// alamat zadan has
 						}
 						cout << endl;
 						for (int l = 0; l <= 9; l++) {		//namayeshe safhe
@@ -660,15 +536,6 @@ int main() {
 	if (rfs == 2) {/entekhabe shansi pc
 				srand(seed);
 				x = rand() % 10;
-				y = rand() % 10;
-				if (a[x][y] == 8 || a[x][y] == 9 || a[x][y] == 7) {
-					continue;
-				}
-				else {
-					if (a[x][y] == 1) {		// zarbe dorost
-						a[x][y] = 9;		// alamat zadan zarbe dorost
-						if (x + 1 <= 9 && y + 1 <= 9) {		// alamat zadan zarbe dorost
-							a[x + 1][y + 1] = 8;
 						}
 						if (x + 1 <= 9 && y - 1 >= 0) {		// alamat zadan zarbe dorost
 							a[x + 1][y - 1] = 8;
@@ -711,16 +578,6 @@ int main() {
 				cout << "shoma bordid";
 			}
 			//while payin baraye shelike karbar
-			while (check1 == false) {
-				cin >> x >> y;
-				//if payin baraye dorost nadadan
-				if (pc[x][y] == 8 || pc[x][y] == 9 || pc[x][y] == 7) {//9 zarbe e sahih 8 havali e barkhord 7 zarbe e pooch
-					SetConsoleTextAttribute(hstdout, 0x0c); //Color for text
-					cout << "inja nemitavanid shelik konid va mokhtasate jadid baraye shelik vared konid";
-					continue;
-				}
-				//else yani baraye dorost dadn
-				else {
 					if (pc[x][y] == 1) {
 						pc[x][y] = 9;
 						pcn[x][y] = 9;
@@ -759,17 +616,7 @@ int main() {
 						wina = win(pc);
 						if (wina != true && winpc != true) {
 							SetConsoleTextAttribute(hstdout, 0x0a); //Color for text green
-							cout << "\nshelik mavafagh boode pas ye bar dg shelik kn\n";
-						}
-						else {
-							if (wina == true) cout << "shoma bordid";
-							if (winpc == true) cout << "pc bord";
-							system("pause");
-						}
-						cout << endl;
-						for (int l = 0; l <= 9; l++) {		//namayeshe safhe
-							for (int e = 0; e <= 9; e++) {
-								if (pcn[l][e] == 1) {
+							cout << "\nshelik mavafagh boode pas ye bar dg 
 									SetConsoleTextAttribute(hstdout, 0xa2); //Color 
 									cout << char(219) << char(255);
 								}
@@ -812,15 +659,6 @@ int main() {
 									SetConsoleTextAttribute(hstdout, 0xa2); //Color 
 									cout << char(42) << char(255);
 								}
-								if (pcn[l][e] == 8) {
-									SetConsoleTextAttribute(hstdout, 0xe0); //Color 
-									cout << char(176) << char(255);
-
-								}
-							}
-							cout << endl;
-						}
-						continue;
 					}
 				}//else
 }//main
