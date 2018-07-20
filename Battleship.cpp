@@ -19,7 +19,7 @@
 			SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text
 			cin >> direction;
 			switch (direction) {
-			case 1: if (i - 3 >= 0 && a[i - 1][j] == 0 && a[i - 2][j] == 0 && a[i - 3][j] == 0) {
+			case 1: if ([j] == 0 && a[i - 2][j] == 0 && a[i - 3][j] == 0) {
 				//gozashtane 1	4
 				a[i - 1][j] = a[i - 2][j] = a[i - 3][j] = a[i][j] = 1;
 
@@ -481,10 +481,7 @@
 				}// else
 			}//while pc
 			check1 = false;
-			winpc = win(a);
-			if (winpc == true)
-				co
-			else
+			winpc
 			{
 				SetConsoleTextAttribute(hstdout, 0x09); //Color for text green
 				cout << "shoma bordid";
