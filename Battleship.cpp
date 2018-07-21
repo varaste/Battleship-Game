@@ -15,7 +15,7 @@
 					 a[4][7] = a[4][8] = a[4][9] = a[5][6] = a[5][8] = a[6][0] = a[6][1] = a[6][2] = a[6][3] = a[6][6] =
 					 a[6][8] = a[7][1] = a[7][3] = a[7][6] = a[7][7] = a[7][8] = a[7][9] = a[8][1] = a[8][3] =
 					 a[8][4] = a[8][5] = a[8][6]
-			cout << "for up : 1\nfor right : 2\nfor down : 3\nfor left : 4\n";
+			cout << "for up : 1\nfor right : 2\nfor down : 3\n4\n";
 			SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text
 			cin >> direction;
 			switch (direction) {
@@ -126,23 +126,7 @@
 					   SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
 					   cout << "diraction ghalate dobare vared konid\n" << endl;
 					   cout << "\a";
-					   break;
-
-				   }
-			}// switch
-		}//if1
-		else {
-			SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-			cout << "mahal ghalat dadi\n";
-			cout << "\a";
-
-		}//elce if 1
-		SetConsoleTextAttribute(hstdout, 0x0e);		//Color for text yellow
-		for (int k = 0; k < 10; k++) {xt white
-		cin >> i >> j;
-
-		if (i < 10 && i >= 0 && j < 10 && j >= 0 && a[i][j] == 0) {
-			SetConsoleTextAttribute(hstdout, 0x0a);		//Color for text green
+					   break;;		//Color for text green
 			cout << "whats the navis direction?\n";
 			cout << "for up : 1\nfor right : 2\nfor down : 3\nfor left : 4\n";
 			SetConsoleTextAttribute(hstdout, 0x0f);		//Color for text
@@ -241,23 +225,7 @@
 				if (i - 1 >= 0 && j + 1 <= 9)
 					a[i - 1][j + 1] = 2;
 				if (i + 1 <= 9 && j - 1 >= 0)
-					a[i + 1][j - 1] = 2;
-				if (i + 1 <= 9 && j + 1 <= 9)
-					a[i + 1][j + 1] = 2;
-				n++;
-				break;
-			}//if dakhele case
-					else {
-						SetConsoleTextAttribute(hstdout, 0x0c);		//Color for text
-						cout << "diraction 1 ro ghalate dobare vared konid\n" << endl;
-						cout << "\a";
-						break;
-
-					}//end else case 1
-
-			case 2:if (j + 1 >= 0 && a[i][j + 1] == 0) {
-				//gozashtane 1
-				a[i][j] = 1;
+					a[i + 1][j 
 
 				//gozashtane 2
 				for (int k = j; k <= j + 1; k++) {
