@@ -1,3 +1,65 @@
+# Battleship Game
+This is a C++ implementation of the classic Battleship game. Two players place ships on a 10x10 grid and take turns firing at each other's ships.
+
+## Rules
+Each player places 5 ships on their grid:
++ 1 x 4 cell ship
++ 2 x 3 cell ships
++ 3 x 2 cell ships
++ 4 x 1 cell ships
+
+Players alternate turns firing at a grid coordinate
+
+If a ship is hit, the player marks it on their tracking grid
+
+The first player to sink all enemy ships wins
+
+## Code Overview
+The core logic is in main():
+
++ a[][] - Player 1's ocean grid
++ pc[][] - Player 2's ocean grid
++ pcn[][] - Player 2's tracking grid
+
+Ships are pre-populated for simplicity.
+
+Game loop:
+
+1. Player 1 fires shot at pc[][]
+  + Check for hit or miss and mark pcn[][]
+2. Check if Player 2 ships sunk. If yes, Player 1 wins
+3. Player 2 fires shot at a[][]
+  + Check for hit or miss
+4. Check if Player 1 ships sunk. If yes, Player 2 wins
+5. Repeat turns until a player wins
+
+win() function checks if all ships sunk by analyzing the ocean grid.
+
+Input validation ensures shots are at unused spots.
+
+## Usage
+
++ Compile and run Battleship.cpp
++ Follow prompts to play
+
+## Enhancements
++ Allow players to position their own ships
++ Improve input validation
++ Add difficulty levels
++ Enhance UI and graphics
+
+## Conclusion
+This demonstrates a basic C++ implementation of the game using 2D arrays, functions, and other language features.
+
+Let me know if any part of the code needs further explanation!
+
+
+
+
+
+
+
+
 # Fundamentals-Computer-and-Programming
 Fourth Project Computer and Programming Fundamentals
 
